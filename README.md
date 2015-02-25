@@ -1,5 +1,5 @@
 # Hart-Challenge
-Coding challenge for Hart Solutions. Creating a simple user registration page that connects to a database to store user info, allows for users to comment on one another's pages, and allows for sharing of pictures.
+Coding challenge for Hart Solutions. Creating a simple user registration page that connects to a database to store and retrieve user info. Will allow for users to comment on one another's pages, and allows for sharing of pictures in future iterations.
 
 ### Installation
 
@@ -13,3 +13,7 @@ Once that is ready to go, enter ```php artisan serve``` to run the webserver loc
 Create a database ```uStore``` and run the command ```php artisan migrate``` to create the proper tables 
 
 To seed dummy data into the database, run ```php artisan db:seed``` and it will fill up some random data for comments and users
+
+####TODO
+Link up comment system to user home page
+Include photo sharing upload/download
