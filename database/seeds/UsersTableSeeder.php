@@ -9,12 +9,15 @@ class UsersTableSeeder extends Seeder {
 
     public function run()
     {
+
+        DB::table('users')->delete();
+
         $faker = Faker\Factory::create();
 
         //For loop to go through 10 iterations and add data to user table
         for($i = 0; $i < 10; $i++)
         {
-            $user = \App\User::create(array(
+            $user = App\User::create(array(
                 'email' => $faker->email,
                 'name' => $faker->unique->userName,
                 'password' => $faker->word,

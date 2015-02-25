@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Eloquent {
 
-    protected $fillable = array(
+    protected $fillComments = array(
         'author',
         'text'
     );
@@ -19,20 +19,14 @@ class CommentTableSeeder extends Seeder {
     {
         DB::table('comments')->delete();
 
-        Comment::create(array(
-            'author' => 'Chris Sevilleja',
-            'text' => 'Look I am a test comment.'
-        ));
+        $fakeComments = Faker\Factory::create();
 
-        Comment::create(array(
-            'author' => 'Nick Cerminara',
-            'text' => 'This is going to be super crazy.'
-        ));
-
-        Comment::create(array(
-            'author' => 'Holly Lloyd',
-            'text' => 'I am a master of Laravel and Angular.'
-        ));
+        for ($i = 0; $i < 10; $i++)
+        {
+            Comment::create(array(
+                'author' => $fakeComments->name,
+                'text' => $fakeComments->text()
+            ));
+        }
     }
-
 }
