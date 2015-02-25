@@ -16,4 +16,5 @@ To seed dummy data into the database, run ```php artisan db:seed``` and it will 
 
 ####TODO
 Link up comment system to user home page
+
 Include photo sharing upload/download
